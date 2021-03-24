@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30804.86
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Neuroshima", "Neuroshima\Neuroshima.csproj", "{F192D787-802E-4C53-9EB5-E8EB36A5D332}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F192D787-802E-4C53-9EB5-E8EB36A5D332}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F192D787-802E-4C53-9EB5-E8EB36A5D332}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F192D787-802E-4C53-9EB5-E8EB36A5D332}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F192D787-802E-4C53-9EB5-E8EB36A5D332}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C9A1F88F-F6D2-4805-AAC8-1F77C7C28077}
+	EndGlobalSection
+EndGlobal
