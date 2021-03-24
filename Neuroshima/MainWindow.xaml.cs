@@ -39,18 +39,19 @@ namespace Neuroshima
             {
                 if (rows > 0 && rows < 26 && cols > 0 && cols < 26)
                 {
-                    for (int i = 0; i < rows; i++)
+                    for (int i = 0; i < rows + 1; i++)
                     {
-                        for (int j = 0; j < cols; j++)
+                        for (int j = 0; j < cols + 1; j++)
                         {
                             // Oznaczenie pionowe.
                             if (j == 0 && i != 0)
                             {
+                                char character = (char)(i + 65 - 1);
                                 Border border = new Border()
                                 {
                                     Width = 25,
                                     Height = 25,
-                                    Child = new TextBlock() { Text = $"Y{i}", VerticalAlignment = VerticalAlignment.Center, HorizontalAlignment = HorizontalAlignment.Center },
+                                    Child = new TextBlock() { Text = $"{character}", VerticalAlignment = VerticalAlignment.Center, HorizontalAlignment = HorizontalAlignment.Center },
                                 };
                                 GameBoard.Children.Add(border);
                                 Canvas.SetTop(border, i * 25);
@@ -63,7 +64,7 @@ namespace Neuroshima
                                 {
                                     Width = 25,
                                     Height = 25,
-                                    Child = new TextBlock() { Text = $"X{j}", VerticalAlignment = VerticalAlignment.Center, HorizontalAlignment = HorizontalAlignment.Center },
+                                    Child = new TextBlock() { Text = $"{j}", VerticalAlignment = VerticalAlignment.Center, HorizontalAlignment = HorizontalAlignment.Center },
                                 };
                                 GameBoard.Children.Add(border);
                                 Canvas.SetTop(border, i * 25);
@@ -80,7 +81,7 @@ namespace Neuroshima
                                     Width = 25,
                                     Height = 25,
                                     //Fill = Brushes.Gray,
-                                    Fill = null,
+                                    Fill = Brushes.Transparent,
                                     Stroke = Brushes.Black,
                                     StrokeThickness = 1,
                                 };
