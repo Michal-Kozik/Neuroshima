@@ -19,9 +19,18 @@
                         <RowDefinition Height="7*"/>
                     </Grid.RowDefinitions>
                     <Border Grid.Row="1" BorderBrush="Black" BorderThickness="2">
-                        <Canvas Name="GameBoard" Width="650" Height="650" Background="LightGray" VerticalAlignment="Center" HorizontalAlignment="Center">
-                            <Image Source="Resources/kebab-2.jpg" Height="625" Margin="25, 25, 0, 0"></Image>
-                        </Canvas>
+                        <StackPanel Orientation="Vertical">
+                            <DockPanel Margin="50, 5, 50, 5" HorizontalAlignment="Center">
+                                <Label>Wiersze:</Label>
+                                <TextBox Name="InputRows" Width="50" VerticalContentAlignment="Center"></TextBox>
+                                <Label>Kolumny:</Label>
+                                <TextBox Name="InputCols" Width="50" VerticalContentAlignment="Center"></TextBox>
+                                <Button Width="75" Margin="10, 0, 0, 0" Click="CreateBoard">Stwórz</Button>
+                            </DockPanel>
+                            <Canvas Name="GameBoard" Width="650" Height="650" Background="LightGray" VerticalAlignment="Center" HorizontalAlignment="Center">
+                                <Image Source="Resources/kebab-2.jpg" Height="625" Margin="25, 25, 0, 0"></Image>
+                            </Canvas>
+                        </StackPanel>
                     </Border>
                     <Border Grid.Row="1" Grid.Column="1" BorderBrush="Black" BorderThickness="2">
                         <GroupBox Header="Obiekty" Margin="5">
