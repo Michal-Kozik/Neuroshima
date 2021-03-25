@@ -147,6 +147,13 @@ namespace Neuroshima
                 case "yellow":
                     rec.Fill = Brushes.Yellow;
                     break;
+                case "arcisz":
+                    //rec.Fill = new ImageBrush { ImageSource = new BitmapImage(new Uri("Images/Arcisz.png", UriKind.Relative)) };
+                    rec.Fill = new ImageBrush { ImageSource = new BitmapImage(new Uri("pack://application:,,,/Neuroshima;component/Images/Arcisz.png", UriKind.Absolute)) };
+                    break;
+                case "kuba":
+                    rec.Fill = Brushes.Yellow;
+                    break;
                 default:
                     rec.Fill = Brushes.Gray;
                     break;
@@ -166,6 +173,12 @@ namespace Neuroshima
                     break;
                 case "Blue":
                     currentObject = "blue";
+                    break;
+                case "Arcisz":
+                    currentObject = "arcisz";
+                    break;
+                case "Kuba":
+                    currentObject = "kuba";
                     break;
                 default:
                     currentObject = "gray";

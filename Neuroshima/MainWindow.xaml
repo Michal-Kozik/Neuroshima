@@ -28,7 +28,12 @@
                                 <Button Width="75" Margin="10, 0, 0, 0" Click="CreateBoard">Stwórz</Button>
                             </DockPanel>
                             <Canvas Name="GameBoard" Width="650" Height="650" Background="LightGray" VerticalAlignment="Center" HorizontalAlignment="Center">
-                                <Image Source="Resources/kebab-2.jpg" Height="625" Margin="25, 25, 0, 0"></Image>
+                                <Image Source="Images/kebab-2.jpg" Height="625" Margin="25, 25, 0, 0"></Image>
+                                <Rectangle Width="50" Height="50">
+                                    <Rectangle.Fill>
+                                        <ImageBrush></ImageBrush>
+                                    </Rectangle.Fill>
+                                </Rectangle>
                             </Canvas>
                         </StackPanel>
                     </Border>
@@ -38,7 +43,13 @@
                                 <RadioButton GroupName="objects" Name="Green" Content="Zielony" Checked="ChoosenObject"></RadioButton>
                                 <RadioButton GroupName="objects" Name="Blue" Content="Niebieski" Checked="ChoosenObject"></RadioButton>
                                 <RadioButton GroupName="objects" Name="Yellow" Content="Żółty" Checked="ChoosenObject"></RadioButton>
-                                <RadioButton GroupName="objects" Name="Gray" Content="Szary" Checked="ChoosenObject"></RadioButton>
+                                <RadioButton GroupName="objects" Name="Gray" Content="Szary" Checked="ChoosenObject" IsChecked="True"></RadioButton>
+                                <RadioButton GroupName="objects" Name="Kuba" Checked="ChoosenObject">
+                                    <Image Source="Images/Kuba.png" Width="25" Height="25"></Image>
+                                </RadioButton>
+                                <RadioButton GroupName="objects" Name="Arcisz" Checked="ChoosenObject">
+                                    <Image Source="Images/Arcisz.png" Width="25" Height="25"></Image>
+                                </RadioButton>
                             </StackPanel>
                         </GroupBox>
                     </Border>
