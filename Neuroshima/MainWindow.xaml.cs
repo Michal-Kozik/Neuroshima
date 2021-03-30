@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.IO;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -26,6 +27,47 @@ namespace Neuroshima
         {
             InitializeComponent();
             //CreateBoard();
+            
+        }
+
+        private void LoadSprites(object sender, RoutedEventArgs e)
+        {
+            string result = Properties.Resources.SpritesConfig;
+            string[] lines = result.Split(';');
+            // wczytanie kazdego obrazka
+            for (int i = 0; i < lines.Length; i++)
+            {
+                string[] words = lines[i].Split('=');
+                //words[0].Replace('\r', ' ');
+                //words[0].Replace('\n', ' ');
+                //words[0].Trim();
+                try
+                {
+                    switch(i + 1)
+                    {
+                        case 1:
+                            Image1.Source = new BitmapImage(new Uri("pack://application:,,,/Neuroshima;component/Images/" + words[1], UriKind.Absolute));
+                            Image1.Width = 50;
+                            Image1.Height = 50;
+                            break;
+                        case 2:
+                            Image2.Source = new BitmapImage(new Uri("pack://application:,,,/Neuroshima;component/Images/" + words[1], UriKind.Absolute));
+                            Image2.Width = 50;
+                            Image2.Height = 50;
+                            break;
+                        case 3:
+                            Image3.Source = new BitmapImage(new Uri("pack://application:,,,/Neuroshima;component/Images/" + words[1], UriKind.Absolute));
+                            Image3.Width = 50;
+                            Image3.Height = 50;
+                            break;
+                    }
+                }
+                catch (IOException ex)
+                {
+                    MessageBox.Show($"Wystąpił błąd podczas ładowania, sprawdź czy SpritesConfig.txt jest uzupełniony poprawnie.", "Nie odnaleziono pliku!", MessageBoxButton.OK, MessageBoxImage.Error);
+                    return;
+                }
+            }
         }
 
         private void CreateBoard(object sender, RoutedEventArgs e)
@@ -185,5 +227,7 @@ namespace Neuroshima
                     break;
             }
         }
+
+        
     }
 }

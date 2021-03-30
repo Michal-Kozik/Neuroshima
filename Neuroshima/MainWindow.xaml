@@ -18,6 +18,7 @@
                         <RowDefinition Height="3*"/>
                         <RowDefinition Height="7*"/>
                     </Grid.RowDefinitions>
+                    <Button Width="100" Height="50" Click="LoadSprites">Załaduj obrazki</Button>
                     <Border Grid.Row="1" BorderBrush="Black" BorderThickness="2">
                         <StackPanel Orientation="Vertical">
                             <DockPanel Margin="50, 5, 50, 5" HorizontalAlignment="Center">
@@ -45,10 +46,13 @@
                                 <RadioButton GroupName="objects" Name="Yellow" Content="Żółty" Checked="ChoosenObject"></RadioButton>
                                 <RadioButton GroupName="objects" Name="Gray" Content="Szary" Checked="ChoosenObject" IsChecked="True"></RadioButton>
                                 <RadioButton GroupName="objects" Name="Kuba" Checked="ChoosenObject">
-                                    <Image Source="Images/Kuba.png" Width="25" Height="25"></Image>
+                                    <Image Name="Image1"></Image>
                                 </RadioButton>
                                 <RadioButton GroupName="objects" Name="Arcisz" Checked="ChoosenObject">
-                                    <Image Source="Images/Arcisz.png" Width="25" Height="25"></Image>
+                                    <Image Name="Image2"></Image>
+                                </RadioButton>
+                                <RadioButton GroupName="objects" Name="Nic" Checked="ChoosenObject">
+                                    <Image Name="Image3"></Image>
                                 </RadioButton>
                             </StackPanel>
                         </GroupBox>

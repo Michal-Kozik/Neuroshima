@@ -59,5 +59,14 @@ namespace Neuroshima.Properties {
                 resourceCulture = value;
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to sprite1=Kuba.png.
+        /// </summary>
+        internal static string SpritesConfig {
+            get {
+                return ResourceManager.GetString("SpritesConfig", resourceCulture);
+            }
+        }
     }
 }
