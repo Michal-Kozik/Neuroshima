@@ -39,23 +39,120 @@
                         </StackPanel>
                     </Border>
                     <Border Grid.Row="1" Grid.Column="1" BorderBrush="Black" BorderThickness="2">
-                        <GroupBox Header="Obiekty" Margin="5">
-                            <StackPanel Orientation="Vertical">
-                                <RadioButton GroupName="objects" Name="Green" Content="Zielony" Checked="ChoosenObject"></RadioButton>
-                                <RadioButton GroupName="objects" Name="Blue" Content="Niebieski" Checked="ChoosenObject"></RadioButton>
-                                <RadioButton GroupName="objects" Name="Yellow" Content="Żółty" Checked="ChoosenObject"></RadioButton>
-                                <RadioButton GroupName="objects" Name="Gray" Content="Szary" Checked="ChoosenObject" IsChecked="True"></RadioButton>
-                                <RadioButton GroupName="objects" Name="Kuba" Checked="ChoosenObject">
-                                    <Image Name="Image1"></Image>
-                                </RadioButton>
-                                <RadioButton GroupName="objects" Name="Arcisz" Checked="ChoosenObject">
-                                    <Image Name="Image2"></Image>
-                                </RadioButton>
-                                <RadioButton GroupName="objects" Name="Nic" Checked="ChoosenObject">
-                                    <Image Name="Image3"></Image>
-                                </RadioButton>
-                            </StackPanel>
-                        </GroupBox>
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="auto"/>
+                                <RowDefinition Height="auto"/>
+                                <RowDefinition Height="auto"/>
+                                <RowDefinition Height="auto"/>
+                            </Grid.RowDefinitions>
+                            <RadioButton GroupName="objects" Name="Rubber" Content="Gumka" Checked="ChoosenObject" IsChecked="True" Margin="5" HorizontalAlignment="Center"></RadioButton>
+                            <!-- Postacie -->
+                            <GroupBox Grid.Row="1" Header="Postacie" Margin="5">
+                                <StackPanel Orientation="Vertical">
+                                    <RadioButton GroupName="objects" Name="Kuba" Checked="ChoosenObject" VerticalContentAlignment="Center">
+                                        <WrapPanel>
+                                            <Image Name="Image1" Width="25" Height="25" Margin="0, 2.5, 5, 2.5" Source="Images/Image_Placeholder.png"></Image>
+                                            <TextBlock VerticalAlignment="Center">Postać 1</TextBlock>
+                                        </WrapPanel>
+                                    </RadioButton>
+                                    <RadioButton GroupName="objects" Name="Arcisz" Checked="ChoosenObject" VerticalContentAlignment="Center">
+                                        <WrapPanel>
+                                            <Image Name="Image2" Width="25" Height="25" Margin="0, 2.5, 5, 2.5" Source="Images/Image_Placeholder.png"></Image>
+                                            <TextBlock VerticalAlignment="Center">Postać 2</TextBlock>
+                                        </WrapPanel>
+                                    </RadioButton>
+                                    <RadioButton GroupName="objects" Name="Nic" Checked="ChoosenObject" VerticalContentAlignment="Center">
+                                        <WrapPanel>
+                                            <Image Name="Image3" Width="25" Height="25" Margin="0, 2.5, 5, 2.5" Source="Images/Image_Placeholder.png"></Image>
+                                            <TextBlock VerticalAlignment="Center">Postać 3</TextBlock>
+                                        </WrapPanel>
+                                    </RadioButton>
+                                    <RadioButton GroupName="objects" Name="Hero4" Checked="ChoosenObject" VerticalContentAlignment="Center">
+                                        <WrapPanel>
+                                            <Image Name="Image4" Width="25" Height="25" Margin="0, 2.5, 5, 2.5" Source="Images/Image_Placeholder.png"></Image>
+                                            <TextBlock VerticalAlignment="Center">Postać 4</TextBlock>
+                                        </WrapPanel>
+                                    </RadioButton>
+                                    <RadioButton GroupName="objects" Name="Hero5" Checked="ChoosenObject" VerticalContentAlignment="Center">
+                                        <WrapPanel>
+                                            <Image Name="Image5" Width="25" Height="25" Margin="0, 2.5, 5, 2.5" Source="Images/Image_Placeholder.png"></Image>
+                                            <TextBlock VerticalAlignment="Center">Postać 5</TextBlock>
+                                        </WrapPanel>
+                                    </RadioButton>
+                                </StackPanel>
+                            </GroupBox>
+                            <!-- Przeciwnicy -->
+                            <GroupBox Grid.Row="2" Header="Przeciwnicy" Margin="5">
+                                <StackPanel Orientation="Vertical">
+                                    <RadioButton GroupName="objects" Name="Enemy1" Checked="ChoosenObject" VerticalContentAlignment="Center">
+                                        <WrapPanel>
+                                            <Image Name="ImageEnemy1" Width="25" Height="25" Margin="0, 2.5, 5, 2.5" Source="Images/Image_Placeholder.png"></Image>
+                                            <TextBlock VerticalAlignment="Center">Przeciwnik 1</TextBlock>
+                                        </WrapPanel>
+                                    </RadioButton>
+                                    <RadioButton GroupName="objects" Name="Enemy2" Checked="ChoosenObject" VerticalContentAlignment="Center">
+                                        <WrapPanel>
+                                            <Image Name="ImageEnemy2" Width="25" Height="25" Margin="0, 2.5, 5, 2.5" Source="Images/Image_Placeholder.png"></Image>
+                                            <TextBlock VerticalAlignment="Center">Przeciwnik 2</TextBlock>
+                                        </WrapPanel>
+                                    </RadioButton>
+                                    <RadioButton GroupName="objects" Name="Enemy3" Checked="ChoosenObject" VerticalContentAlignment="Center">
+                                        <WrapPanel>
+                                            <Image Name="ImageEnemy3" Width="25" Height="25" Margin="0, 2.5, 5, 2.5" Source="Images/Image_Placeholder.png"></Image>
+                                            <TextBlock VerticalAlignment="Center">Przeciwnik 3</TextBlock>
+                                        </WrapPanel>
+                                    </RadioButton>
+                                    <RadioButton GroupName="objects" Name="Enemy4" Checked="ChoosenObject" VerticalContentAlignment="Center">
+                                        <WrapPanel>
+                                            <Image Name="ImageEnemy4" Width="25" Height="25" Margin="0, 2.5, 5, 2.5" Source="Images/Image_Placeholder.png"></Image>
+                                            <TextBlock VerticalAlignment="Center">Przeciwnik 4</TextBlock>
+                                        </WrapPanel>
+                                    </RadioButton>
+                                    <RadioButton GroupName="objects" Name="Enemy5" Checked="ChoosenObject" VerticalContentAlignment="Center">
+                                        <WrapPanel>
+                                            <Image Name="ImageEnemy5" Width="25" Height="25" Margin="0, 2.5, 5, 2.5" Source="Images/Image_Placeholder.png"></Image>
+                                            <TextBlock VerticalAlignment="Center">Przeciwnik 5</TextBlock>
+                                        </WrapPanel>
+                                    </RadioButton>
+                                </StackPanel>
+                            </GroupBox>
+                            <!-- Przeciwnicy -->
+                            <GroupBox Grid.Row="3" Header="Obiekty" Margin="5">
+                                <StackPanel Orientation="Vertical">
+                                    <RadioButton GroupName="objects" Name="Object1" Checked="ChoosenObject" VerticalContentAlignment="Center">
+                                        <WrapPanel>
+                                            <Image Name="ObjectImage1" Width="25" Height="25" Margin="0, 2.5, 5, 2.5" Source="Images/Image_Placeholder.png"></Image>
+                                            <TextBlock VerticalAlignment="Center">Obiekt 1</TextBlock>
+                                        </WrapPanel>
+                                    </RadioButton>
+                                    <RadioButton GroupName="objects" Name="Object2" Checked="ChoosenObject" VerticalContentAlignment="Center">
+                                        <WrapPanel>
+                                            <Image Name="ObjectImage2" Width="25" Height="25" Margin="0, 2.5, 5, 2.5" Source="Images/Image_Placeholder.png"></Image>
+                                            <TextBlock VerticalAlignment="Center">Obiekt 2</TextBlock>
+                                        </WrapPanel>
+                                    </RadioButton>
+                                    <RadioButton GroupName="objects" Name="Object3" Checked="ChoosenObject" VerticalContentAlignment="Center">
+                                        <WrapPanel>
+                                            <Image Name="ObjectImage3" Width="25" Height="25" Margin="0, 2.5, 5, 2.5" Source="Images/Image_Placeholder.png"></Image>
+                                            <TextBlock VerticalAlignment="Center">Obiekt 3</TextBlock>
+                                        </WrapPanel>
+                                    </RadioButton>
+                                    <RadioButton GroupName="objects" Name="Object4" Checked="ChoosenObject" VerticalContentAlignment="Center">
+                                        <WrapPanel>
+                                            <Image Name="ObjectImage4" Width="25" Height="25" Margin="0, 2.5, 5, 2.5" Source="Images/Image_Placeholder.png"></Image>
+                                            <TextBlock VerticalAlignment="Center">Obiekt 4</TextBlock>
+                                        </WrapPanel>
+                                    </RadioButton>
+                                    <RadioButton GroupName="objects" Name="Object5" Checked="ChoosenObject" VerticalContentAlignment="Center">
+                                        <WrapPanel>
+                                            <Image Name="ImageObject5" Width="25" Height="25" Margin="0, 2.5, 5, 2.5" Source="Images/Image_Placeholder.png"></Image>
+                                            <TextBlock VerticalAlignment="Center">Obiekt 5</TextBlock>
+                                        </WrapPanel>
+                                    </RadioButton>
+                                </StackPanel>
+                            </GroupBox>
+                        </Grid>
                     </Border>
                 </Grid>
             </TabItem>

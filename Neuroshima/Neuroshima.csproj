@@ -130,10 +130,13 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Images\Arcisz1.png" />
+    <Resource Include="Images\Arcisz.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\SpritesConfig.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Image_Placeholder.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -47,18 +47,18 @@ namespace Neuroshima
                     {
                         case 1:
                             Image1.Source = new BitmapImage(new Uri("pack://application:,,,/Neuroshima;component/Images/" + words[1], UriKind.Absolute));
-                            Image1.Width = 50;
-                            Image1.Height = 50;
+                            Image1.Width = 25;
+                            Image1.Height = 25;
                             break;
                         case 2:
                             Image2.Source = new BitmapImage(new Uri("pack://application:,,,/Neuroshima;component/Images/" + words[1], UriKind.Absolute));
-                            Image2.Width = 50;
-                            Image2.Height = 50;
+                            Image2.Width = 25;
+                            Image2.Height = 25;
                             break;
                         case 3:
                             Image3.Source = new BitmapImage(new Uri("pack://application:,,,/Neuroshima;component/Images/" + words[1], UriKind.Absolute));
-                            Image3.Width = 50;
-                            Image3.Height = 50;
+                            Image3.Width = 25;
+                            Image3.Height = 25;
                             break;
                     }
                 }
@@ -180,8 +180,8 @@ namespace Neuroshima
         {
             switch (currentObject)
             {
-                case "green":
-                    rec.Fill = Brushes.Green;
+                case "rubber":
+                    rec.Fill = Brushes.Transparent;
                     break;
                 case "blue":
                     rec.Fill = Brushes.Blue;
@@ -194,7 +194,10 @@ namespace Neuroshima
                     rec.Fill = new ImageBrush { ImageSource = new BitmapImage(new Uri("pack://application:,,,/Neuroshima;component/Images/Arcisz.png", UriKind.Absolute)) };
                     break;
                 case "kuba":
-                    rec.Fill = Brushes.Yellow;
+                    rec.Fill = new ImageBrush { ImageSource = new BitmapImage(new Uri("pack://application:,,,/Neuroshima;component/Images/Kuba.png", UriKind.Absolute)) };
+                    break;
+                case "kebab":
+                    rec.Fill = new ImageBrush { ImageSource = new BitmapImage(new Uri("pack://application:,,,/Neuroshima;component/Images/kebab-2.jpg", UriKind.Absolute)) };
                     break;
                 default:
                     rec.Fill = Brushes.Gray;
@@ -207,8 +210,8 @@ namespace Neuroshima
             RadioButton rb = sender as RadioButton;
             switch (rb.Name)
             {
-                case "Green":
-                    currentObject = "green";
+                case "Rubber":
+                    currentObject = "rubber";
                     break;
                 case "Yellow":
                     currentObject = "yellow";
@@ -221,6 +224,9 @@ namespace Neuroshima
                     break;
                 case "Kuba":
                     currentObject = "kuba";
+                    break;
+                case "Nic":
+                    currentObject = "kebab";
                     break;
                 default:
                     currentObject = "gray";
